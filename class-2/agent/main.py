@@ -14,7 +14,7 @@ load_dotenv
                                                      
 gemini_api_key=os.getenv("GEMINI_API_KEY")
 
-External_client = AsyncOpenAI (
+External_client = AsyncOpenAI(
     #  Create external Client using Async
         base_url="https://generativelanguage.googleapis.com/v1beta/openai/",,
 )
