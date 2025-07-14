@@ -1,0 +1,5 @@
+chainlit>=2.5.5
+dotenv>=0.9.9
+openai-agents>=0.0.19
+pymupdf>=1.26.1
+selenium>=4.34.2

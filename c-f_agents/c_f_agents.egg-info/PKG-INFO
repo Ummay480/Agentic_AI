@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: c-f-agents
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: chainlit>=2.5.5
+Requires-Dist: dotenv>=0.9.9
+Requires-Dist: openai-agents>=0.0.19
+Requires-Dist: pymupdf>=1.26.1
+Requires-Dist: selenium>=4.34.2
