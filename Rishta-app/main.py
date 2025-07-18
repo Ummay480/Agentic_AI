@@ -64,7 +64,8 @@ async def main(message:cl.Message):
         input=history
     )
 
-    history.append({"role": "assistsnt", "content": result.final_output})
+    history.append({"role": "assistant", "content": result.final_output})
+
 
     cl.user_session.set("history", history)
 
