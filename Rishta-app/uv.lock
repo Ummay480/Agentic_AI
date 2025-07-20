@@ -76,6 +76,18 @@ wheels = [
 ]
 
 [[package]]
+name = "aiohttp-retry"
+version = "2.9.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "aiohttp" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9d/61/ebda4d8e3d8cfa1fd3db0fb428db2dd7461d5742cea35178277ad180b033/aiohttp_retry-2.9.1.tar.gz", hash = "sha256:8eb75e904ed4ee5c2ec242fefe85bf04240f685391c4879d8f541d6028ff01f1", size = 13608 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1a/99/84ba7273339d0f3dfa57901b846489d2e5c2cd731470167757f1935fffbd/aiohttp_retry-2.9.1-py3-none-any.whl", hash = "sha256:66d2759d1921838256a05a3f80ad7e724936f083e35be5abb5e16eed6be6dc54", size = 9981 },
+]
+
+[[package]]
 name = "aiosignal"
 version = "1.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1900,6 +1912,7 @@ dependencies = [
     { name = "chainlit" },
     { name = "dotenv" },
     { name = "openai-agents" },
+    { name = "twilio" },
 ]
 
 [package.metadata]
@@ -1907,6 +1920,7 @@ requires-dist = [
     { name = "chainlit", specifier = ">=2.6.2" },
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "openai-agents", specifier = ">=0.2.2" },
+    { name = "twilio", specifier = ">=9.6.5" },
 ]
 
 [[package]]
@@ -2199,6 +2213,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/69/54/decc972741935775e597304d8614af40f50ea251e79b8757781fdc6bbdad/traceloop_sdk-0.42.0.tar.gz", hash = "sha256:9eb969e0e101ba141562f9b951ea55a59032d1dc7c055f86cdd6c58863158d3d", size = 22461 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/24/ad/2fc4de9d3524acc10fc498a2e7e8cdaccabd5130426ab010ba4f5ef78ff5/traceloop_sdk-0.42.0-py3-none-any.whl", hash = "sha256:ba55c51ddaf67741f57520e89e13ed1581781b169c68cecf4ce332ea748b82fa", size = 31742 },
+]
+
+[[package]]
+name = "twilio"
+version = "9.6.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "aiohttp" },
+    { name = "aiohttp-retry" },
+    { name = "pyjwt" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7c/5e/0a591781cd360819f61ccb8337efbc5d9931cf286e5b13e5d3ca72735e06/twilio-9.6.5.tar.gz", hash = "sha256:4f246b3d3474090b55dc13034b7cec2f9250877f5298f8419a3fe8a447f36f71", size = 1037726 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/60/89/b32b7c3afef8635f94d2b9a89ae95adf2f13c942c3af047ccaa6d0c442f3/twilio-9.6.5-py2.py3-none-any.whl", hash = "sha256:e9f547267b59fb474bfc715c042662d9d2b1a1bbcde34017954407aa95482277", size = 1895395 },
 ]
 
 [[package]]

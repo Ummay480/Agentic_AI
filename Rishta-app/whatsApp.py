@@ -1,29 +1,27 @@
-import chainlit as cl
-import requests
-from agents import function_tool
+# whatsApp.py
 import os
+from dotenv import load_dotenv
+from twilio.rest import Client
+from agents import function_tool
+
+load_dotenv()
+
+account_sid = os.getenv('TWILIO_ACCOUNT_SID')
+auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+
+client = Client(account_sid, auth_token)
 
 @function_tool
-def send_whatsApp_message(number: str, message: str) -> str:
+def send_whatsApp_message(phone_number: str, message_text: str) -> str:
     """
-    Simulates sending a WhatsApp message.
-    In production, replace this with real API like Twilio or WhatsApp Business API.
+    Send a WhatsApp message using Twilio API.
     """
-
-    instance_id = os.getenv("INSTANCE_ID")
-    token = os.getenv("API_TOKEN")
-
-    url = f"https://api.ultramsg.com/{{instance_id}}/messages/chat"
-
-    payload = {
-        "token": token,
-        "to": number,
-        "body": message
-    }
-
-    response = requests.post(url, data=payload)
-    if response.status_code ==200:
-    
-        return f"Message sent successfully to {number}"
-    else:
-        return f" X failed to send message. Error: {response.text}"
+    try:
+        message = client.messages.create(
+            from_='whatsapp:+14155238886',
+            to=f'whatsapp:{phone_number}',
+            body=message_text  # ✅ Use body for text messages
+        )
+        return f"Message sent to {phone_number}! SID: {message.sid}"
+    except Exception as e:
+        return f"Failed to send message: {str(e)}"

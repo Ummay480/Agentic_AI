@@ -8,4 +8,5 @@ dependencies = [
     "chainlit>=2.6.2",
     "dotenv>=0.9.9",
     "openai-agents>=0.2.2",
+    "twilio>=9.6.5",
 ]
