@@ -1,0 +1,11 @@
+openai
+python-dotenv
+chainlit
+httpx
+twilio
+requests
+beautifulsoup4
+lxml
+pdfplumber
+PyMuPDF
+schedule
